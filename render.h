@@ -34,7 +34,7 @@ void render(geom* g, char** fbuf, float* zbuf, int tgeom[2], renderargs* rargs){
         pt[1] = mid[1] + rargs->K * g->pts[i][0] * oz;
         
         // clip
-        if(pt[0] < tgeom[0] && pt[1] < tgeom[1] && pt[0] > 0 && pt[1] > 0){
+        if(pt[0] < tgeom[0] && pt[1] < tgeom[1] && pt[0] >= 0 && pt[1] >= 0){
             zptr = pt[0] * tgeom[1] + pt[1];
             /* L = glm_vec3_dot(g->norm[i], rargs->lightdir); */
             /* if(L > 0){ */

@@ -16,12 +16,12 @@ void printfbuf(char** fbuf, int tgeom[2]){
 static inline
 void clearfbuf(char** fbuf, int tgeom[2]){
     for(int i=0; i<tgeom[0]; i++){
-        memset(fbuf[i], ' ', (tgeom[1]-1) * sizeof(char));
-        fbuf[i][0] = '|';
-        fbuf[i][tgeom[1]-1] = '|';
+        memset(fbuf[i], ' ', (tgeom[1]) * sizeof(char));
+        /* fbuf[i][0] = '|'; */
+        /* fbuf[i][tgeom[1]-1] = '|'; */
     }
-    memset(fbuf[tgeom[0]-1], '-', (tgeom[1]-1) * sizeof(char));
-    memset(fbuf[0], '-', (tgeom[1]-1) * sizeof(char));
+    /* memset(fbuf[tgeom[0]-1], '-', (tgeom[1]-1) * sizeof(char)); */
+    /* memset(fbuf[0], '-', (tgeom[1]-1) * sizeof(char)); */
 }
 
 static inline
