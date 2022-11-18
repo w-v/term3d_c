@@ -23,6 +23,7 @@ static inline
 void destroygeom(geom* g){
     free(g->pts);
     free(g->norm);
+    free(g);
 }
 
 static inline
